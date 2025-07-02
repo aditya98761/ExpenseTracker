@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Expense</title>
+</head>
+<body>
+    <h1>Update Expense</h1>
+    <form method="POST" action="{{ url_for('update_expense', expense_id=expense.id) }}">
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" value="{{ expense.amount }}" step="0.01" required><br>
+        <label for="description">Description:</label>
+        <textarea name="description" required>{{ expense.description }}</textarea><br>
+        <button type="submit">Update Expense</button>
+    </form>
+</body>
+</html>
